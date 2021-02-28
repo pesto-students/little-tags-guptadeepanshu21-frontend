@@ -1,0 +1,66 @@
+.footer {
+  background-color: #fafbfc;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+  padding-top: 25px;
+  margin-top: 100px;
+}
+
+.rowforfooter {
+  margin: 10px 150px;
+}
+.top {
+  color: #282c3f;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.online {
+  font-size: 12px;
+  margin: 10px 40px;
+}
+
+.icons {
+  height: 10px;
+}
+.icons ion-icon {
+  height: 20px;
+  padding-right: 10px;
+}
+.subscription {
+  border-radius: 30px;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 5px;
+  margin-bottom: -1px;
+  background-color: #fafbfc;
+  border: none;
+  color: #94969f;
+  display: block;
+}
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 0;
+  max-width: 100%;
+}
+
+.button {
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.copyright {
+  color: #94969f;
+  font-size: 14px;
+  float: inherit;
+  font-weight: 100;
+}
+.copyright > p {
+  margin-top: -5px;
+  margin-left: 400px;
+}
