@@ -1,0 +1,9 @@
+p.texttitle {
+  text-transform: uppercase;
+  color: #3e4152;
+  letter-spacing: 0.15em;
+  font-size: 1.8em;
+  margin: 50px;
+  max-height: 5em;
+  font-weight: 500;
+}
