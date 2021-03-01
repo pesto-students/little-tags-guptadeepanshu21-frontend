@@ -25,6 +25,18 @@ function NavigationBar() {
           <Form inline className="searchbar">
             <FormControl type="text" size="sm" className="pl-4" placeholder="Search for products,brands and more" />
           </Form>
+
+          <div className="login">
+              <Col>
+                <Row className="d-flex justify-content-center">
+                <ion-icon name="log-in-outline"></ion-icon>
+                </Row>
+                <Row className="navbar-icon-text d-flex justify-content-center">
+                  Log In
+                </Row>
+              </Col>
+        </div>
+
           <div className="user">
               <Col>
                 <Row className="d-flex justify-content-center">
