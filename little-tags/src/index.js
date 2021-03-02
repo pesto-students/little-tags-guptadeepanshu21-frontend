@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { IntlProvider } from "react-intl";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -9,9 +8,7 @@ const locale = 'en';
 
 ReactDOM.render(
   <React.StrictMode>
-    <IntlProvider locale={locale}>
       <App />
-    </IntlProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
