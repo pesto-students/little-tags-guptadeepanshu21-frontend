@@ -1,0 +1,68 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+       - name: Deploy Action For Netlify
+  # You may pin to the exact commit or the version.
+  # uses: evnex/netlify-deploy@abf48989cdfe57397c9d0e748664964b438d6886
+  uses: evnex/netlify-deploy@1.0.4
+  with:
+    # Github token
+    github-token: 
+    # Your Netlify personal access token (Please save it as a secret in your repo!)
+    netlify-auth-token: 
+    # Your Netlify site's `API ID`
+    netlify-site-id: 
+    # The folder of the site want to deploy
+    build-dir: 
+    # If `true` AND the context of the action is a `commit` then the action will comment on the SHA.
+    comment-on-commit: # optional, default is false
+    # If `true` AND the context of the action is a `pull_request` then the action will comment on the PR.
+    comment-on-pull-request: # optional, default is false
+    # Run the action but don't actually deploy to Netlify or comment on the commit/PR
+    dry-run: # optional, default is false
+    # The folder of any functions to deploy
+    functions-dir: # optional
+    # Path to a netlify.toml file to include in the deploy
+    config-path: # optional
+    # If it is a draft deploy or production deploy
+    draft: # optional, default is false
+    # A short message to associate with the deploy (Note: setting this will override the default deploy message of `<type>: <title> [short_sha]`)
+    message: # optional   
+          
+          
+          
+          
+          
