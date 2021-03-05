@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useIntl, FormattedMessage } from "react-intl";
 import logo from "../../assets/images/logo.jpg";
 import { Navbar, Nav, Form, FormControl, Row, Col } from "react-bootstrap";
 import "./NavBar.css";
+import LangSelector from "../LangSelector/LangSelector";
+import { IntlContext } from "../../context/IntlContext";
 
 function NavigationBar(props) {
-  const { showLoginScreen } = props;
+  const { showLoginScreen  } = props;
+  const intl = useIntl();
+  const { formatMessage } = intl;
+  
   return (
     <div>
       <div className="Navtop fixed-top">
@@ -18,17 +24,22 @@ function NavigationBar(props) {
             />
           </Navbar.Brand>
           <Nav>
-            <Nav.Link href="#men">MEN</Nav.Link>
-            <Nav.Link href="#women">WOMEN</Nav.Link>
-            <Nav.Link href="#kids">KIDS</Nav.Link>
-            <Nav.Link href="#essentials">TRENDING</Nav.Link>
+            <Nav.Link href="#men">
+              <FormattedMessage id="men" defaultMessage="Men" />
+            </Nav.Link>
+            <Nav.Link href="#women">
+              <FormattedMessage id="women" defaultMessage="Women" />
+            </Nav.Link>
+            <Nav.Link href="#kids">
+              <FormattedMessage id="kids" defaultMessage="Kids" />
+            </Nav.Link>
           </Nav>
           <Form inline className="searchbar">
             <FormControl
               type="text"
               size="sm"
               className="pl-4"
-              placeholder="Search for products,brands and more"
+              placeholder={formatMessage({ id: "searchText" })}
             />
           </Form>
 
@@ -38,7 +49,9 @@ function NavigationBar(props) {
                 <ion-icon name="log-in-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                <span onClick={showLoginScreen}>Log In</span>
+                <span onClick={showLoginScreen}>
+                  <FormattedMessage id="login" defaultMessage="Log In" />
+                </span>
               </Row>
             </Col>
           </div>
@@ -49,7 +62,7 @@ function NavigationBar(props) {
                 <ion-icon name="person-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                Profile
+                <FormattedMessage id="profile" defaultMessage="Profile" />
               </Row>
             </Col>
           </div>
@@ -59,7 +72,7 @@ function NavigationBar(props) {
                 <ion-icon name="bookmark-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                Wishlist
+                <FormattedMessage id="wishlist" defaultMessage="Wishlist" />
               </Row>
             </Col>
           </div>
@@ -69,7 +82,7 @@ function NavigationBar(props) {
                 <ion-icon name="cart-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                Cart
+                <FormattedMessage id="cart" defaultMessage="Cart" />
               </Row>
             </Col>
           </div>
@@ -79,7 +92,7 @@ function NavigationBar(props) {
                 <ion-icon name="globe-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                EN
+                <LangSelector />
               </Row>
             </Col>
           </div>

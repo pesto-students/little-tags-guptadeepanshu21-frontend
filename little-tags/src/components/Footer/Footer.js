@@ -1,87 +1,151 @@
-import React from 'react'
-import {Row,Col,ListGroup, InputGroup, FormControl, Button} from 'react-bootstrap';
-import './Footer.css';
+import {
+  Row,
+  Col,
+  ListGroup,
+  InputGroup,
+  FormControl,
+  Button,
+} from "react-bootstrap";
+import { FormattedMessage, useIntl } from "react-intl";
+import "./Footer.css";
 
 function Footer() {
-    return (
-            <div className="footer">
-                <div className="rowforfooter">  
-                {/* <Row>
+  const intl = useIntl();
+  const { formatMessage } = intl;
+  return (
+    <div className="footer">
+      <div className="rowforfooter">
+        {/* <Row>
                   <div>
                     <span>Back To Top</span>
                   </div>
                 </Row> */}
-                <Row>
-                <div className="online">
-                  <Col>
-                  <ListGroup>
-                  <ListGroup.Item><span className="top">CATEGORIES</span></ListGroup.Item>
-                  <ListGroup.Item>Men</ListGroup.Item>
-                  <ListGroup.Item>Women</ListGroup.Item>
-                  <ListGroup.Item>Kids</ListGroup.Item>
-                  <ListGroup.Item>Deals for the Day</ListGroup.Item>
-                </ListGroup>
-                  </Col>
-                  </div>
-                  <div className="online">
-                  <Col>
-                  <ListGroup>
-                  <ListGroup.Item><span class="top">USEFUL LINKS</span></ListGroup.Item>
-                  <ListGroup.Item>Contact Us</ListGroup.Item>
-                  <ListGroup.Item>Track Orders</ListGroup.Item>                
-                 </ListGroup>
-                  </Col>
-
-                  </div>
-                  <div className="online">
-                  <Col>
-                  <ListGroup>                 
-                  <ListGroup.Item><span className="top">CONNECT WITH US</span></ListGroup.Item>
-                  <ListGroup.Item>
+        <Row>
+          <div className="online">
+            <Col>
+              <ListGroup>
+                <ListGroup.Item>
+                  <span className="top">
+                    <FormattedMessage
+                      id="categories"
+                      defaultMessage="Categories"
+                    />
+                  </span>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <FormattedMessage id="men" defaultMessage="Men" />
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <FormattedMessage id="women" defaultMessage="Women" />
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <FormattedMessage id="kids" defaultMessage="Kids" />
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <FormattedMessage
+                    id="dealsOfTheDay"
+                    defaultMessage="Deals of the day"
+                  />
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+          </div>
+          <div className="online">
+            <Col>
+              <ListGroup>
+                <ListGroup.Item>
+                  <span class="top">
+                    <FormattedMessage
+                      id="usefulLinks"
+                      defaultMessage="Useful Links"
+                    />
+                  </span>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <FormattedMessage
+                    id="contactUs"
+                    defaultMessage="Contact Us"
+                  />
+                </ListGroup.Item>
+                {/* <ListGroup.Item>Track Orders</ListGroup.Item>  */}
+              </ListGroup>
+            </Col>
+          </div>
+          <div className="online">
+            <Col>
+              <ListGroup>
+                <ListGroup.Item>
+                  <span className="top">
+                    <FormattedMessage
+                      id="connectWithUs"
+                      defaultMessage="Connect with us"
+                    />
+                  </span>
+                </ListGroup.Item>
+                <ListGroup.Item>
                   <div className="icons">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                  <ion-icon name="logo-twitter"></ion-icon>
-                  <ion-icon name="logo-youtube"></ion-icon>
-                  <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
                   </div>
-                  </ListGroup.Item>
-                </ListGroup>
-                  </Col>
-                  </div>                
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+          </div>
 
-                  <div className="online">
-                  <Col>
-                  <ListGroup>
-                  <ListGroup.Item>
-                  <span className="top">KEEP UPTO DATE WITH <br/> LATEST NEWS AND SPECIAL OFFERS</span>
-                  </ListGroup.Item>
-                  <ListGroup.Item>                 
-                   <InputGroup className="mb-3 input">
-                   <FormControl
-                      className="button" 
-                      placeholder="Enter Email ID here"
-                      aria-label="Enter Email ID here"
+          <div className="online">
+            <Col>
+              <ListGroup>
+                <ListGroup.Item>
+                  <span className="top">
+                    <FormattedMessage
+                      id="newsletterHeading"
+                      defaultMessage="Newsletter"
+                    />
+                  </span>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <InputGroup className="mb-3 input">
+                    <FormControl
+                      className="button"
+                      placeholder={formatMessage({
+                        id: "newsletterPlaceholder",
+                      })}
+                      aria-label={formatMessage({
+                        id: "newsletterPlaceholder",
+                      })}
                       aria-describedby="basic-addon2"
                       required
                     />
                     <InputGroup.Append>
-                      <Button className="button" size="sm" variant="outline-secondary">Submit</Button>
+                      <Button
+                        className="button"
+                        size="sm"
+                        variant="outline-secondary"
+                      >
+                        <FormattedMessage
+                          id="newsletterButton"
+                          defaultMessage="Submit"
+                        />
+                      </Button>
                     </InputGroup.Append>
                   </InputGroup>
-                  </ListGroup.Item>
-                  </ListGroup>
-                  </Col>
-                  </div>
-                </Row>
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+          </div>
+        </Row>
 
-                <div className="copyright">
-                  <hr/>
-                <p>© 2021 Clothify. All Rights Reserved.</p>
-                </div>
-                
+        <div className="copyright">
+          <hr />
+          <p>
+            © <FormattedMessage id="copyright" defaultMessage="Copyright" />
+          </p>
         </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;
