@@ -1,16 +1,15 @@
-import React, { useContext } from "react";
 import { Card, CardDeck } from "react-bootstrap";
-import { injectIntl } from "react-intl";
-import { IntlContext } from "../../context/IntlContext";
+import { FormattedMessage } from "react-intl";
 import "./Brand.css";
 
-function Brand(props) {
-  const { intl } = props;
-  const { formatMessage } = intl;
-  const { messages } = useContext(IntlContext);
+function Brand() {
+
   return (
     <div>
-      <p className="title">{formatMessage({ id: messages.whatsNew })}</p>
+      <p className="title">
+          <FormattedMessage id="whatsNew"
+          defaultMessage="What's New" />
+      </p>
       <CardDeck>
         <Card>
           <Card.Img
@@ -51,4 +50,4 @@ function Brand(props) {
   );
 }
 
-export default injectIntl(Brand);
+export default Brand;

@@ -1,17 +1,14 @@
-import React, { useContext } from "react";
 import { Card, CardDeck } from "react-bootstrap";
-import { injectIntl } from "react-intl";
-import { IntlContext } from "../../context/IntlContext";
+import { FormattedMessage } from "react-intl";
 import "./Card.css";
 
 function CategoryCard(props) {
-  const { intl } = props;
-  const { formatMessage } = intl;
-  const { messages } = useContext(IntlContext);
+  
   return (
     <div>
       <p className="title">
-      {formatMessage({ id: messages.categories})}
+      <FormattedMessage id="categories"
+          defaultMessage="Categories" />
       </p>
       <CardDeck>
         <Card>
@@ -46,4 +43,4 @@ function CategoryCard(props) {
   );
 }
 
-export default injectIntl(CategoryCard);
+export default CategoryCard;

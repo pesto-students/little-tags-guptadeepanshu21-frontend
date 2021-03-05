@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { injectIntl } from "react-intl";
+import { useIntl, FormattedMessage } from "react-intl";
 import logo from "../../assets/images/logo.jpg";
 import { Navbar, Nav, Form, FormControl, Row, Col } from "react-bootstrap";
 import "./NavBar.css";
@@ -7,9 +7,10 @@ import LangSelector from "../LangSelector/LangSelector";
 import { IntlContext } from "../../context/IntlContext";
 
 function NavigationBar(props) {
-  const { showLoginScreen, intl } = props;
+  const { showLoginScreen  } = props;
+  const intl = useIntl();
   const { formatMessage } = intl;
-  const { messages } = useContext(IntlContext);
+  
   return (
     <div>
       <div className="Navtop fixed-top">
@@ -24,13 +25,13 @@ function NavigationBar(props) {
           </Navbar.Brand>
           <Nav>
             <Nav.Link href="#men">
-              {formatMessage({ id: messages.men })}
+              <FormattedMessage id="men" defaultMessage="Men" />
             </Nav.Link>
             <Nav.Link href="#women">
-              {formatMessage({ id: messages.women })}
+              <FormattedMessage id="women" defaultMessage="Women" />
             </Nav.Link>
             <Nav.Link href="#kids">
-              {formatMessage({ id: messages.kids })}
+              <FormattedMessage id="kids" defaultMessage="Kids" />
             </Nav.Link>
           </Nav>
           <Form inline className="searchbar">
@@ -38,7 +39,7 @@ function NavigationBar(props) {
               type="text"
               size="sm"
               className="pl-4"
-              placeholder={formatMessage({ id: messages.searchText })}
+              placeholder={formatMessage({ id: "searchText" })}
             />
           </Form>
 
@@ -49,7 +50,7 @@ function NavigationBar(props) {
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
                 <span onClick={showLoginScreen}>
-                  {formatMessage({ id: messages.login })}
+                  <FormattedMessage id="login" defaultMessage="Log In" />
                 </span>
               </Row>
             </Col>
@@ -61,7 +62,7 @@ function NavigationBar(props) {
                 <ion-icon name="person-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                {formatMessage({ id: messages.profile })}
+                <FormattedMessage id="profile" defaultMessage="Profile" />
               </Row>
             </Col>
           </div>
@@ -71,7 +72,7 @@ function NavigationBar(props) {
                 <ion-icon name="bookmark-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                {formatMessage({ id: messages.wishlist })}
+                <FormattedMessage id="wishlist" defaultMessage="Wishlist" />
               </Row>
             </Col>
           </div>
@@ -81,7 +82,7 @@ function NavigationBar(props) {
                 <ion-icon name="cart-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
-                {formatMessage({ id: messages.cart })}
+                <FormattedMessage id="cart" defaultMessage="Cart" />
               </Row>
             </Col>
           </div>
@@ -101,4 +102,4 @@ function NavigationBar(props) {
   );
 }
 
-export default injectIntl(NavigationBar);
+export default NavigationBar;

@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import {
   Row,
   Col,
@@ -7,14 +6,12 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
-import { injectIntl } from "react-intl";
-import { IntlContext } from "../../context/IntlContext";
+import { FormattedMessage, useIntl } from "react-intl";
 import "./Footer.css";
 
-function Footer(props) {
-  const { intl } = props;
+function Footer() {
+  const intl = useIntl();
   const { formatMessage } = intl;
-  const { messages } = useContext(IntlContext);
   return (
     <div className="footer">
       <div className="rowforfooter">
@@ -29,20 +26,26 @@ function Footer(props) {
               <ListGroup>
                 <ListGroup.Item>
                   <span className="top">
-                  {formatMessage({ id: messages.categories})}
+                    <FormattedMessage
+                      id="categories"
+                      defaultMessage="Categories"
+                    />
                   </span>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                {formatMessage({ id: messages.men})}
+                  <FormattedMessage id="men" defaultMessage="Men" />
                 </ListGroup.Item>
                 <ListGroup.Item>
-                {formatMessage({ id: messages.women})}
+                  <FormattedMessage id="women" defaultMessage="Women" />
                 </ListGroup.Item>
                 <ListGroup.Item>
-                {formatMessage({ id: messages.kids})}
+                  <FormattedMessage id="kids" defaultMessage="Kids" />
                 </ListGroup.Item>
                 <ListGroup.Item>
-                {formatMessage({ id: messages.dealsOfTheDay})}
+                  <FormattedMessage
+                    id="dealsOfTheDay"
+                    defaultMessage="Deals of the day"
+                  />
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -52,11 +55,17 @@ function Footer(props) {
               <ListGroup>
                 <ListGroup.Item>
                   <span class="top">
-                  {formatMessage({ id: messages.usefulLinks})}
+                    <FormattedMessage
+                      id="usefulLinks"
+                      defaultMessage="Useful Links"
+                    />
                   </span>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                {formatMessage({ id: messages.contactUs})}
+                  <FormattedMessage
+                    id="contactUs"
+                    defaultMessage="Contact Us"
+                  />
                 </ListGroup.Item>
                 {/* <ListGroup.Item>Track Orders</ListGroup.Item>  */}
               </ListGroup>
@@ -67,7 +76,10 @@ function Footer(props) {
               <ListGroup>
                 <ListGroup.Item>
                   <span className="top">
-                  {formatMessage({ id: messages.connectWithUs})}
+                    <FormattedMessage
+                      id="connectWithUs"
+                      defaultMessage="Connect with us"
+                    />
                   </span>
                 </ListGroup.Item>
                 <ListGroup.Item>
@@ -87,15 +99,22 @@ function Footer(props) {
               <ListGroup>
                 <ListGroup.Item>
                   <span className="top">
-                  {formatMessage({ id: messages.newsletterHeading})}
+                    <FormattedMessage
+                      id="newsletterHeading"
+                      defaultMessage="Newsletter"
+                    />
                   </span>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <InputGroup className="mb-3 input">
                     <FormControl
                       className="button"
-                      placeholder={formatMessage({ id: messages.newsletterPlaceholder})}
-                      aria-label={formatMessage({ id: messages.newsletterPlaceholder})}
+                      placeholder={formatMessage({
+                        id: "newsletterPlaceholder",
+                      })}
+                      aria-label={formatMessage({
+                        id: "newsletterPlaceholder",
+                      })}
                       aria-describedby="basic-addon2"
                       required
                     />
@@ -105,7 +124,10 @@ function Footer(props) {
                         size="sm"
                         variant="outline-secondary"
                       >
-                        {formatMessage({ id: messages.newsletterButton})}
+                        <FormattedMessage
+                          id="newsletterButton"
+                          defaultMessage="Submit"
+                        />
                       </Button>
                     </InputGroup.Append>
                   </InputGroup>
@@ -117,11 +139,13 @@ function Footer(props) {
 
         <div className="copyright">
           <hr />
-          <p>© {formatMessage({ id: messages.copyright})}</p>
+          <p>
+            © <FormattedMessage id="copyright" defaultMessage="Copyright" />
+          </p>
         </div>
       </div>
     </div>
   );
 }
 
-export default injectIntl(Footer);
+export default Footer;
