@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%;
+}
+
+.filter-wrapper {
+  margin-top: 3rem;
+  margin-right: 9rem;
+}
+
+.inner-wrap {
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.large {
+  font-size: 1.4rem;
+  margin-bottom: 1.7rem;
+  /* padding: 0.8rem; */
+}
+
+.radio-btn label {
+  margin-left: 0.5rem;
+  /* margin-top: 0.5rem; */
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}

@@ -9,12 +9,14 @@ function NavigationBar() {
        <div className="Navtop fixed-top">
             <Navbar className="shadow p-3 mb-5">
           <Navbar.Brand href="#home" className="mainlogo">
+          <a href="/">
           <img
               src={logo}
               height="48"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
+            </a>
           </Navbar.Brand>
           <Nav>
             <Nav.Link href="#men">MEN</Nav.Link>
@@ -23,7 +25,7 @@ function NavigationBar() {
             <Nav.Link href="#essentials">TRENDING</Nav.Link>
           </Nav>
           <Form inline className="searchbar">
-            <FormControl type="text" size="sm" className="pl-4" placeholder="Search for products,brands and more" />
+            <FormControl type="text" size="lg" className="pl-4" placeholder="Search for products, brands and more" />
           </Form>
 
           <div className="login">

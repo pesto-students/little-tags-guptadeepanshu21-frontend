@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  padding: 3rem;
+  /* display: inline-block; */
+  margin-top: 9rem;
+  /* margin-bottom: -2.5rem; */
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 13rem;
+}
+.large {
+  font-size: 1.4rem;
+  /* padding: 0.8rem; */
+}
+
+.cart {
+  cursor: pointer;
+}
+
+.cart:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
