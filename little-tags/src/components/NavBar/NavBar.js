@@ -40,7 +40,7 @@ function NavigationBar(props) {
           <Form inline className="searchbar">
             <FormControl
               type="text"
-              size="sm"
+              size="large"
               className="pl-4"
               placeholder={formatMessage({ id: "searchText" })}
             />
@@ -105,3 +105,4 @@ function NavigationBar(props) {
   );
 }
 
+export default NavigationBar

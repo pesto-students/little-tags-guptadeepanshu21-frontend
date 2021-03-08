@@ -64,17 +64,6 @@ ion-icon:hover {
   padding: 10px;
 }
 
-.svg-inline--fa {
-  display: inline-block;
-  font-size: inherit;
-  height: 1em;
-  overflow: visible;
-  color: #282c3f;
-}
-.material-icons.md-dark {
-  color: #282c3f;
-}
-
 @media (max-width: 998px) {
   html {
     font-size: 55%;

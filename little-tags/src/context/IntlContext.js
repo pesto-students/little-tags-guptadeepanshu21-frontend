@@ -11,7 +11,7 @@ const enTranslation = {
   categories: "Categories",
   cart: "Cart",
   whatsNew: "What's New",
-  searchText: "Search for products,brands and more",
+  searchText: "Search for products, brands and more",
   dealsOfTheDay: "Deals of the day",
   contactUs: "Contact Us",
   faq: "FAQ",
