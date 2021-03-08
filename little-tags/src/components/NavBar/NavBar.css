@@ -12,9 +12,6 @@ html {
   padding: 0rem;
   padding-left: 4rem;
 }
-.search {
-  width: 8rem;
-}
 
 .navbar-light .navbar-nav .nav-link {
   color: #282c3f;
@@ -81,11 +78,21 @@ ion-icon:hover {
 @media (max-width: 998px) {
   html {
     font-size: 55%;
+    margin-right: -10rem;
+  }
+  .searchbar {
+    max-width: 22rem;
   }
 }
 
 @media (max-width: 768px) {
   html {
     font-size: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 35%;
   }
 }

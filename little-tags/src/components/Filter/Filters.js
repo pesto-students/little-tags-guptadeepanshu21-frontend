@@ -51,22 +51,22 @@ const Filters = () =>{
         "value": [
             {
                 "id": 2087285,
-                "name": "Rs. 269 to Rs. 6452",
+                "name": "Rs. 300 to Rs. 1000",
                 "count": 20
               },
               {
                 "id": 9137517,
-                "name": "Rs. 6452 to Rs. 12635",
+                "name": "Rs. 1000 to Rs. 2000",
                 "count": 36
               },
               {
                 "id": 9133517,
-                "name": "Rs. 12635 to Rs. 18818",
+                "name": "Rs. 2000 to Rs. 5000",
                 "count": 59
               },
               {
                 "id": 9137117,
-                "name": "Rs. 18818 to Rs. 25001",
+                "name": "Rs. 5000 and above",
                 "count": 8
               },
         ]

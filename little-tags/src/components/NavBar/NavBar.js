@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../assets/images/logo.jpg';
 import {Navbar,Nav,Form,FormControl,Row,Col} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom'
 import './NavBar.css';
 
 function NavigationBar() {
@@ -9,14 +10,14 @@ function NavigationBar() {
        <div className="Navtop fixed-top">
             <Navbar className="shadow p-3 mb-5">
           <Navbar.Brand href="#home" className="mainlogo">
-          <a href="/">
+          <NavLink to="/">
           <img
               src={logo}
               height="48"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
-            </a>
+           </NavLink>
           </Navbar.Brand>
           <Nav>
             <Nav.Link href="#men">MEN</Nav.Link>
