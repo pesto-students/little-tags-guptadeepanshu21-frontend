@@ -1,41 +1,45 @@
+html {
+  font-size: 62.5%;
+}
+
 .footer {
   background-color: #fafbfc;
   font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica, Arial, sans-serif;
-  padding-top: 25px;
-  margin-top: 100px;
+  padding-top: 2.5rem;
+  margin-top: 10rem;
 }
 
 .rowforfooter {
-  margin: 10px 150px;
+  margin: 1rem 15rem;
 }
 .top {
   color: #282c3f;
-  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .online {
-  font-size: 12px;
-  margin: 10px 40px;
+  font-size: 1.2rem;
+  margin: 1rem 4rem;
 }
 
 .icons {
-  height: 10px;
+  height: 1rem;
 }
 .icons ion-icon {
-  height: 20px;
-  padding-right: 10px;
+  height: 2rem;
+  padding-right: 1rem;
 }
 .subscription {
-  border-radius: 30px;
+  border-radius: 3rem;
 }
 .list-group-item {
   position: relative;
   display: block;
-  padding: 5px;
-  margin-bottom: -1px;
+  padding: 0.5rem;
+  margin-bottom: -0.1rem;
   background-color: #fafbfc;
   border: none;
   color: #94969f;
@@ -50,17 +54,29 @@
 }
 
 .button {
-  border-radius: 50px;
-  font-size: 12px;
+  border-radius: 5rem;
+  font-size: 1.2rem;
 }
 
 .copyright {
   color: #94969f;
-  font-size: 14px;
+  font-size: 1.4rem;
   float: inherit;
   font-weight: 100;
 }
 .copyright > p {
-  margin-top: -5px;
-  margin-left: 400px;
+  margin-top: -0.5rem;
+  margin-left: 40rem;
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
 }

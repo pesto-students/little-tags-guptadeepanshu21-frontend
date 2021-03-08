@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import './App.css';
+// import NavBar from './components/NavBar/NavBar';
+// import Carousel from './components/Carousel/Carousel'
+// import CategoryCard from './components/Category-Card/Card'
+// import Brand from './components/Brand/Brand'  
+// import Footer from './components/Footer/Footer'
+
+import {Route, Switch} from 'react-router-dom'
+import LandingPage from './Pages/LandingPage'
+import ProductListPage from './Pages/ProductListPage'
+=======
 import { useState } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -8,10 +20,7 @@ import Footer from "./components/Footer/Footer";
 import PopUp from "./components/PopUp";
 import Login from "./components/Login/Login";
 import {IntlContextProvider} from "./context/IntlContext";
-
-import {Route, Switch} from 'react-router-dom'
-import LandingPage from './Pages/LandingPage'
-import ProductListPage from './Pages/ProductListPage'
+>>>>>>> e4b73bc252160f789e0a606b0d93d28f68ca63fe
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
@@ -20,6 +29,13 @@ function App() {
     setShowLogin(true);
   };
   return (
+<<<<<<< HEAD
+    <div className="main">      
+        <Switch>
+          <Route exact path ='/' component = {LandingPage} />
+          <Route path ='/products' component = {ProductListPage} />
+        </Switch>
+=======
     <div className="main">
       <IntlContextProvider>
         <NavBar showLoginScreen={showLoginScreen} />
@@ -35,6 +51,7 @@ function App() {
           ""
         )}
       </IntlContextProvider>
+>>>>>>> e4b73bc252160f789e0a606b0d93d28f68ca63fe
     </div>
   );
 }
