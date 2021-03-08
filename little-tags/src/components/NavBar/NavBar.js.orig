@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react'
+import logo from '../../assets/images/logo.jpg';
+import {Navbar,Nav,Form,FormControl,Row,Col} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom'
+import './NavBar.css';
+=======
 import React, { useContext } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import logo from "../../assets/images/logo.jpg";
@@ -5,7 +12,7 @@ import { Navbar, Nav, Form, FormControl, Row, Col } from "react-bootstrap";
 import "./NavBar.css";
 import LangSelector from "../LangSelector/LangSelector";
 import { IntlContext } from "../../context/IntlContext";
-import { NavLink } from 'react-router-dom'
+>>>>>>> e4b73bc252160f789e0a606b0d93d28f68ca63fe
 
 function NavigationBar(props) {
   const { showLoginScreen  } = props;
@@ -17,8 +24,12 @@ function NavigationBar(props) {
       <div className="Navtop fixed-top">
         <Navbar className="shadow p-3 mb-5">
           <Navbar.Brand href="#home" className="mainlogo">
+<<<<<<< HEAD
           <NavLink to="/">
           <img
+=======
+            <img
+>>>>>>> e4b73bc252160f789e0a606b0d93d28f68ca63fe
               src={logo}
               height="48"
               className="d-inline-block align-top"
@@ -38,12 +49,16 @@ function NavigationBar(props) {
             </Nav.Link>
           </Nav>
           <Form inline className="searchbar">
+<<<<<<< HEAD
+            <FormControl type="text" size="lg" className="pl-4" placeholder="Search for products, brands and more" />
+=======
             <FormControl
               type="text"
               size="sm"
               className="pl-4"
               placeholder={formatMessage({ id: "searchText" })}
             />
+>>>>>>> e4b73bc252160f789e0a606b0d93d28f68ca63fe
           </Form>
 
           <div className="login">
@@ -105,3 +120,4 @@ function NavigationBar(props) {
   );
 }
 
+export default NavigationBar;
