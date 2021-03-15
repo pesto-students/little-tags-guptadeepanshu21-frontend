@@ -80,6 +80,7 @@ function NavigationBar(props) {
             </Col>
           </div>
           <div className="cart">
+          <NavLink to="/cart">
             <Col>
               <Row className="d-flex justify-content-center">
                 <ion-icon name="cart-outline"></ion-icon>
@@ -88,6 +89,7 @@ function NavigationBar(props) {
                 <FormattedMessage id="cart" defaultMessage="Cart" />
               </Row>
             </Col>
+            </NavLink>
           </div>
           <div className="language">
             <Col>
