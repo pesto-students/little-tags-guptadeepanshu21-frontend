@@ -23,9 +23,6 @@ html {
   cursor: pointer;
 }
 
-.cart:hover {
-  cursor: pointer;
-}
 
 @media (max-width: 998px) {
   html {

@@ -4,13 +4,18 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
+import reducer, { initialState } from './context/reducer';
+import { StateProvider } from './context/StateProvider';
+
 
 const locale = 'en';
 
 ReactDOM.render(
+  <StateProvider initialState={initialState} reducer={reducer}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </StateProvider>
   ,
   document.getElementById('root')
 );

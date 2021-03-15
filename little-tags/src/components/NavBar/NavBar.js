@@ -16,7 +16,7 @@ function NavigationBar(props) {
     <div>
       <div className="Navtop fixed-top">
         <Navbar className="shadow p-3 mb-5">
-          <Navbar.Brand href="#home" className="mainlogo">
+          <Navbar.Brand href="/" className="mainlogo">
           <NavLink to="/">
           <img
               src={logo}
@@ -27,13 +27,14 @@ function NavigationBar(props) {
            </NavLink>
           </Navbar.Brand>
           <Nav>
-            <Nav.Link href="#men">
+            
+            <Nav.Link href="/products">
               <FormattedMessage id="men" defaultMessage="Men" />
             </Nav.Link>
-            <Nav.Link href="#women">
+            <Nav.Link href="/products">
               <FormattedMessage id="women" defaultMessage="Women" />
             </Nav.Link>
-            <Nav.Link href="#kids">
+            <Nav.Link href="/products">
               <FormattedMessage id="kids" defaultMessage="Kids" />
             </Nav.Link>
           </Nav>
@@ -80,16 +81,16 @@ function NavigationBar(props) {
             </Col>
           </div>
           <div className="cart">
-          <NavLink to="/cart">
             <Col>
+          <NavLink to="/cart">
               <Row className="d-flex justify-content-center">
                 <ion-icon name="cart-outline"></ion-icon>
               </Row>
               <Row className="navbar-icon-text d-flex justify-content-center">
                 <FormattedMessage id="cart" defaultMessage="Cart" />
               </Row>
-            </Col>
             </NavLink>
+            </Col>
           </div>
           <div className="language">
             <Col>

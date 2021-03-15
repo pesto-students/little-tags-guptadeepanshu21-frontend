@@ -10,6 +10,7 @@ import PaymentPage from "./Pages/PaymentPage"
 import 'react-toastify/dist/ReactToastify.css';
 import { auth, db } from './firebase/firebaseConfig';
 import { useStateValue } from './context/StateProvider';
+import Login from './components/Login/Login'
 
 
 function App() {

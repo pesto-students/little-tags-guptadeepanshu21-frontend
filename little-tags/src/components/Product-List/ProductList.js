@@ -4,6 +4,8 @@ import items from './ProductData'
 import Filters from '../Filter/Filters'
 import './ProductList.css'
 import { ToastContainer } from 'react-toastify';
+import Product from '../Product/Product'
+
 
 function ProductList() {
     return (

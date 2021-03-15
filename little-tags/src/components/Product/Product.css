@@ -3,12 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    max-height: 400px;
-    min-width: 100px;
-    margin: 10px;
+
+    /* margin: 10px; */
     padding: 20px;
-    width: 100%;
-    z-index: 1;
+    /* width: 100%; */
+    /* z-index: 1; */
     background-color: white;
   }
   

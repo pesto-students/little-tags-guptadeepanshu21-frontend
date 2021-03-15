@@ -36,8 +36,9 @@
   /* .payment__address { */
   /* } */
   /*  */
-  /* .payment__items { */
-  /* } */
+  .payment__items { 
+    margin-right: 25rem;
+  }
   /*  */
   /* .payment__title > h3 { */
   /* } */
@@ -45,7 +46,22 @@
   .payment__details > form {
     max-width: 400px;
   }
+
+  .shipping {
+    margin-right: 30rem;
+  }
+
+  .shipping > form > select {
+    width: 30%;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: rgb(78, 76, 76);
+  }
   
+  .stripe {
+    margin-right: 48rem;
+  }
+
   .payment__details > h3 {
     padding-bottom: 20px;
   }
