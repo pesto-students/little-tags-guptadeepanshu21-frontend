@@ -258,7 +258,7 @@ function Payment() {
       name='Clothify Ltd.'
       billingAddress
       shippingAddress
-      image='https://svgshare.com/i/CUz.svg'
+      image='https://my-clothify.netlify.app/static/media/logo.713d92c7.jpg'
       description={`Your total is ₹ ${getCartTotal(cart)}`}
       amount={priceForStripe}
       panelLabel='Pay Now'

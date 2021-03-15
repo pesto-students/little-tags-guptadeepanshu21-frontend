@@ -47,6 +47,7 @@
 .loginBtn--google {
   background: #DD4B39;
   width: 210px;
+  cursor: pointer;
 }
 .loginBtn--google:before {
   border-right: #BB3F30 1px solid;
@@ -59,11 +60,11 @@
 .login-container {
     display: inline-grid;
     justify-content: center;
-    
    
 }
 .login-btn {
     width: 80px;
-    margin: 50px;
-    margin-top: 40px;
+    /* margin: 50px; */
+    /* margin-top: 40px; */
+    cursor: pointer;
 }
