@@ -125,9 +125,9 @@ function Payment() {
 
         {/* Delivery address */}
         <div className="payment__section">
-          <div className="payment__title">
-            <h3>Delivery Address</h3>
-          </div>
+          {/* <div className="payment__title">
+            <h3></h3>
+          </div> */}
           <div className = "shipping">
             <p>{user?.email}</p>
 
@@ -151,63 +151,13 @@ function Payment() {
           onChange={(val) => handleRegion(val)} />
            </Form.Group> */}
 
-<Form >
-  <Form.Row>
-    <Form.Group controlId="formGridEmail">
-      <Form.Label>Email</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-    </Form.Group>
-
-    <Form.Group controlId="formGridPassword">
-      <Form.Label>Contact</Form.Label>
-      <Form.Control type="number" placeholder="Contact No." />
-    </Form.Group>
-  </Form.Row>
-
-  <Form.Group controlId="formGridAddress1">
-    <Form.Label>Address</Form.Label>
-    <Form.Control placeholder="221B Baker St" />
-  </Form.Group>
-
-  <Form.Group controlId="formGridAddress2">
-    <Form.Label>Address 2</Form.Label>
-    <Form.Control placeholder="Apartment, studio, or floor" />
-  </Form.Group>
-  {/* <CountryDropdown
-            value={country}
-           onChange={(val) => handleCountry(val)} /> */}
-  <Form.Row>
-           
-    <Form.Group controlId="formGridCity">
-      <Form.Label>City</Form.Label>
-      <Form.Control />
-    </Form.Group>
-
-    <Form.Group  controlId="formGridState">
-      <Form.Label>State</Form.Label>
-      <Form.Control as="select" defaultValue="Choose...">
-        <option>Choose...</option>
-        <option>...</option>
-      </Form.Control>
-    </Form.Group>
-
-    <Form.Group  controlId="formGridZip">
-      <Form.Label>Zip</Form.Label>
-      <Form.Control />
-    </Form.Group>
-  </Form.Row>
-
-  <Button variant="primary" type="submit">
-    Save
-  </Button>
-</Form>
 
           </div>
         </div>
         {/* review Items */}
         <div className="payment__section">
           <div className="payment__title">
-            <h3>Review Items and Delivery</h3>
+            <h3>Review Items</h3>
           </div>
           <div className="payment__items">
             {cart.map((item, index) => (
@@ -225,6 +175,7 @@ function Payment() {
         {/* payment method */}
         <div className="payment__section">
           <div className="payment__title">
+            <h3>Delivery Address &</h3>
             <h3>Payment Method</h3>
           </div>
           <div className="stripe">
@@ -252,7 +203,8 @@ function Payment() {
 
               {error && <div>error</div>}
             </form>
-
+            {/* <p>*Please use the following test credit card for payments*
+4242 4242 4242 4242 - Exp: 01/20 - CVV: 123</p> */}
             <StripeCheckout
       label='Pay Now'
       name='Clothify Ltd.'
