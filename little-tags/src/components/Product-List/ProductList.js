@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col,Breadcrumb, Card, CardColumns, Dropdown, DropdownButton } from 'react-bootstrap';
+import { Container, Row, Col,Breadcrumb, Card, CardColumns, Dropdown, DropdownButton, CardGroup } from 'react-bootstrap';
 import items from './ProductData'
 import Filters from '../Filter/Filters'
 import './ProductList.css'
@@ -38,9 +38,11 @@ function ProductList() {
                 </DropdownButton>
             </Container>
             
-            <Container className="mx-5">
-            <CardColumns>
-            <Product
+            {/* <Container className="mx-5">
+            <CardColumns> */}
+               
+                <CardGroup className = "wrap">
+                 <Product
                     id={2087285}
                     title="Men Solid Bombet Jacket"
                     price={7500}
@@ -96,8 +98,10 @@ function ProductList() {
                     rating={4.0}
                     image="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/9564737/2019/11/7/e9e18815-c96a-4db2-b47d-5bf4995fe3081573103446301-Roadster-Men-Jackets-3391573103444243-1.jpg"
                 />
-            </CardColumns>
-            </Container>
+            {/* </CardColumns>
+            </Container> */}
+            </CardGroup>
+            
         </Container>
                 </Col>
             </Row>
